@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,700;1,100&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+  box-sizing: border-box;
+}
+
+body{
+  background: #F8F8F8;
+}
+.textarea:focus{
+ outline: none;
+  border: solid 2px #1976D2;
+}
+
+.userinfo{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.dis{
+  font-weight: 700;
+  background-color: #1976D2;
+  width: 200px;
+  height: 90px;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closeicon{
+  position: absolute;
+  display: none !important;
+  z-index: 9;
+}
+.openicon{
+  position: absolute;
+  display: none !important;
+  z-index: 9;
+}
+
+@media screen and (max-Width: 850px) {
+  .userinfo{
+    grid-template-columns: 100%;
+  }
+  .userInfo{
+    transition: all 0.3s linear;
+    position: absolute;
+    left: -90%;
+    z-index: 7;
+  }
+  .closeicon{
+    display: block !important;
+  }
+  .openicon{
+    display: block !important;
+  }
+}
+
+
+.MuiDialog-paperScrollPaper{
+  border-radius: 12px !important;
+ 
+}
+
