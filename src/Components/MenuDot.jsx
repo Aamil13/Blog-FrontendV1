@@ -21,6 +21,7 @@ export default function LongMenu({id}) {
   const [upopen,setUpOpen] = React.useState(false)
   const handleOpen=()=> setUpOpen(true)
   const handleclose=()=> setUpOpen(false)
+  console.log(id);
 
   const dispatch = useDispatch();
   const open = Boolean(anchorEl);
@@ -32,7 +33,7 @@ export default function LongMenu({id}) {
     if(e.target.innerText === "EDIT"){
       const singlepost = await dispatch(SinglePost(id))
       // console.log(singlepost.payload.post);
-      setPostData(singlepost.payload.post)
+      setPostData(singlepost?.payload.post)
       handleOpen()
     }
     else if(e.target.innerText === "DELETE"){

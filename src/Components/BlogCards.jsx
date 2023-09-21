@@ -19,7 +19,7 @@ import OpenPost from './OpenPost';
 
 export default function RecipeReviewCard({data}) {
   const [handleopen, sethandleOpen] = React.useState(false);
-
+// console.log(data);
 
   const userlog = useSelector((state)=> state.authStore)
 
@@ -45,7 +45,7 @@ export default function RecipeReviewCard({data}) {
           </Avatar>
         }
         action={
-          isLoggedInUser() && <LongMenu id={data.user._id}/>
+          isLoggedInUser() && <LongMenu id={data._id}/>
         }
         title={data.title}
         subheader={new Date(data.date).toLocaleDateString()}
